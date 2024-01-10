@@ -1,2 +1,9 @@
-<h1>This is my Handlebars Homepage...</h1>
-<p>{{stock}}</p>
+<h1>{{ stock.[0].companyName }}</h1>
+<br/><br/>
+
+<p>This is the stock:</p>
+{{#each stock}}
+    {{#eachObject this}}
+        {{key}} | {{value}}<br/>
+    {{/eachObject}}
+{{/each}}
